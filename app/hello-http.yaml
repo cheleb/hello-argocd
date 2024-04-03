@@ -24,7 +24,7 @@ spec:
           imagePullPolicy: IfNotPresent
           ports:
             - name: hello-http-port
-              containerPort: 8000
+              containerPort: 8080
           env:
             - name: DB_HOST
               value: postgresql-svc

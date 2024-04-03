@@ -2,7 +2,7 @@
 
 const http = require('http')
 
-var VERSION = 'V1'
+var VERSION = 'V3'
 
 const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'application/json' })
