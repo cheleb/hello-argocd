@@ -26,4 +26,4 @@ spec:
         spec:
             containers:
                 - name: hello-http
-                  image: hello-http:2
+                  image: registry.orb.local/hello-http:3
