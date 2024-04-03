@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: hello-http
+spec:
+    selector:
+        app: hello-http
+    ports:
+        - protocol: TCP
+          port: 80
+          targetPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: hello-http
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: hello-http
+    template:
+        metadata:
+            labels:
+                app: hello-http
+        spec:
+            containers:
+                - name: hello-http
+                  image: hello-http:2
