@@ -7,5 +7,5 @@ fi
 
 echo "Building hello-http:$VERSION"
 
-docker build . --tag registry.orb.local/hello-http:$VERSION
-docker push registry.orb.local/hello-http:$VERSION
+docker build . --tag registry.orb.local/hello-http:$VERSION --push
+#docker push registry.orb.local/hello-http:$VERSION
